@@ -1,0 +1,515 @@
+/* ---------------------------------------------------------------
+	Template Name: Plegma
+	Template URI: http://www.ergastiri.eu
+	Description: ERgastiri - One Page CV template
+	Author: Nicolas
+	Author URI: http://www.ergastiri.eu
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+	
+	1.	Document Setup
+	2.  Welcome section	
+	3.  About Section
+	4.	Skills Section
+	5.	Experience Section
+	6.	Education Section
+	7.	Contact Section
+	8.	Map Section
+	9.  Blog Section
+-------------------------------------------------------------------*/		
+
+// ------------------------------------------------------------------
+// 1. Document Setup
+// ------------------------------------------------------------------
+ body {
+    // adjust for navbar-fixed-top
+    padding-top: @navbar-height;
+		font-family: Teko, Helvetica, @font-family-sans-serif;
+
+}
+.navbar {
+    font-size: 1.5em;
+    .navbar-nav {
+        margin-left: 2em;
+    }
+    // Adjust nav bar for extra-small viewports only
+    @media (max-width: @screen-xs-max), (max-width: @screen-sm-max) {
+        font-size: 1.2em;
+        .navbar-collapse .navbar-nav {
+            margin-left: 0;
+        }
+    }
+    // Adjust nav bar for medium viewports only
+    @media (max-width: @screen-md-max) {
+        font-size: 1.3em;
+        .navbar-collapse .navbar-nav {
+            margin-left: 1em;
+        }
+    }
+}
+#about, #skills, #experience, #education, #blog, #contact {
+    padding-top: 36px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    h1 {
+        font-size: 5em;
+        font-weight: 600; // semi-bold
+        color: @gray;
+        padding-bottom: 0; 
+        border-bottom: 8px solid #ef7674;
+        margin-bottom: 40px;
+    }
+    p {
+        font-size: 1.3em;
+        font-weight: 300;
+    }
+}
+// Adjust section headings for extra-small viewports only
+		@media (max-width: @screen-xs-max) {
+    #about, #skills, #experience, #education, #blog, #contact {
+        margin-left: 30px;
+        margin-right: 30px;
+        h1 {
+            font-size: 3em;
+            font-weight: 600; // semi-bold
+        }
+        p {
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+    }
+}
+//-------------------------------------------------------------------
+// 2. Welcome section
+// ------------------------------------------------------------------
+ #welcome {
+    height: 300px;
+    background-color: #191919;
+    color: #fff;
+    position: relative;
+    .welcome-message {
+        background-color: hsla(0, 0, 1%, 0.4); // translucent overlay
+        position: absolute;
+        top: 0px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px 40px;
+        strong {
+            font-size: 1.5em;
+        }
+    }
+		h1  {
+        text-shadow: 0 5px 10px #000;
+        color: yellow;
+
+  		}
+    .btn {
+        margin-top: 16px;
+        text-transform: uppercase;
+    }
+    @media (max-width: @screen-sm-max) {
+        background: #191919 url('../img/light-1280.jpg') center center no-repeat;
+				h1, strong  {
+				    text-shadow: 0 0 0 #000;
+				    display: block;
+				}    
+    }
+    @media (min-width: @screen-sm-min) {
+ 			 height: 600px;
+      .container {
+          position: relative;
+      }
+      .welcome-message {
+          right: 20%;
+          bottom: auto;
+          strong {
+            display: block;
+          }
+      }
+    }
+    @media (min-width: @screen-md-min) {
+        height: 700px;
+        background: #191919 url('../img/light-1920.jpg') center center no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        .welcome-message {
+            right: 50%;
+        }
+    }
+}
+//-------------------------------------------------------------------
+// 3. About Section
+// ------------------------------------------------------------------
+ #about {
+    .about-item {
+        text-align: center;
+        padding: 20px;
+        height: 200px;
+        margin-bottom: 25px;
+        border: 1px solid rgba(0, 0, 0, .25);
+        webkit-transition: all .2s ease-in, 1s;
+        -moz-transition: all .2s ease-in, 1s;
+        -o-transition: all .2s ease-in, 1s;
+        -ms-transition: all .2s ease-in, 1s;
+        transition: all .2s ease-in, 1s;
+        @media (max-width: @screen-sm-max) {
+            .center-block();
+        }
+        @media (max-width: @screen-xs-max) {
+            max-width: 320px;
+            .center-block();
+        }
+        .icon {
+            font-size: 90px;
+        }
+        &:focus, &:hover {
+            background-color: #F28729;
+            border-color: #F28729;
+        }
+    }
+    img {
+      //box-shadow: 0 .5px 5px@gray; 
+      margin-bottom: 20px;
+      .center-block();
+    }
+    .hobbies {
+      .hobbies-item {
+          text-align: center;
+          padding: 20px;
+          height: 150px;
+          border: 1px solid rgba(0, 0, 0, .25);
+          margin: 0 auto;
+          webkit-transition: all .1s ease-in, 1s;
+          -moz-transition: all .1s ease-in, 1s;
+          -o-transition: all .1s ease-in, 1s;
+          -ms-transition: all .1s ease-in, 1s;
+          transition: all .1s ease-in, 1s;
+          .icon {
+              font-size: 48px;
+          }
+          &:focus, &:hover {
+              background-color: #F28729;
+              border-color: #F28729;
+          }
+          @media (max-width: @screen-xs-max) {
+              max-width: 320px;
+              .center-block();
+          }
+      }
+      h2 {
+        font-weight: 600;
+        color: #F28729;
+      }
+    }
+}
+//-------------------------------------------------------------------
+// 4. Skills Section
+// ------------------------------------------------------------------
+ #skills {
+		h3 {
+		   display: inline-block;
+		   border-bottom: 4px solid @gray; 
+		   color: #F28729;
+		}
+		.label {			// Bootstrap helper class
+	    display: inline-block;
+	    font-size: 1.3em;
+	    margin-bottom: 16px;
+	    margin-right: 8px;
+	    color: @gray-dark; 
+	    @media (max-width: @screen-sm-max) {
+		    font-size: 1em;
+		    max-width: 480px;
+	      .center-block();
+	    }
+		}
+ }
+//-------------------------------------------------------------------
+//  5. Experience Section
+// ------------------------------------------------------------------
+#experience {
+	.experience-detail .detailArea {
+		border-left:dashed 1px black;
+		padding-bottom:47px;
+	}
+	.experience-detail:first-child {
+		margin-top:20px;
+	}
+	.experience-detail:last-child .detailArea {
+		padding-bottom:0px;
+	}
+	.experience-detail:last-child .detailArea .expCompany p:last-child{
+		padding-bottom:0;
+	}
+	.experienceYear {
+		font-size:17px;
+		color:#fff;		
+		line-height:40px;
+	}
+	.experienceYear span{
+		display:block;
+		font-size:18pxpx;
+		padding:0 21px;
+		white-space:nowrap;
+		float:right;
+		margin-bottom:2px;
+		margin-right:28px;
+		font-weight:bold;
+		}
+	.startY{
+		background-color:#8A1700;
+		color: #ddd; 
+		}
+	.endY{
+		background-color:#FF5600;
+		color: #ddd; 
+		}
+	.time-circle {
+		width:44px;
+		height:44px;
+		margin-left:-38px;
+		margin-top:32px;
+		float:left;
+		background:url(../img/time-circle.png) no-repeat 0 0 #f8f7f8;
+	}
+	.expCompany {
+		width:auto;
+		padding:0 47px 6px 70px;
+		margin-left:15px;
+		text-align:left;
+		p {
+		color: @gray-dark;
+		line-height:27px;
+		}
+		h3 {
+		color:@gray-dark;
+		padding-bottom:1px;
+		margin-top:-8px;
+		}
+		h4 {
+		color:@gray-dark;
+		padding-bottom:11px;
+		}
+	}
+  @media (max-width: @screen-xs-max), (max-width: @screen-sm-max) {
+    .time-circle  {
+    	display: none;
+    }
+      span.startY, span.endY  {
+        width: 100%;
+        .center-block();
+      }
+      .experience-detail .detailArea {
+				border-left:none;
+			}
+			.expCompany {
+        width: 100%;
+        padding: 0;
+        margin: 15px 0 0 0;
+			}	
+  }
+}
+// ------------------------------------------------------------------
+// 6. Education Section
+// ------------------------------------------------------------------
+#education {
+	.education-detail .detailArea {
+		border-left:dashed 1px black;
+		padding-bottom:47px;
+	}
+	.education-detail:last-child .detailArea {
+		padding-bottom:0px;
+	}
+	.education-detail:last-child .detailArea .eduEntity p:last-child{
+		padding-bottom:0;
+	}
+	.educationYear {
+		font-size:17px;
+		line-height:40px;
+	}
+	.educationYear span{
+		display:block;
+		font-size:18pxpx;
+		padding:0 21px;
+		white-space:nowrap;
+		float:right;
+		margin-bottom:2px;
+		margin-right:28px;
+		font-weight:bold;
+		}
+	.eduY{
+		background-color: #F28729; //edited
+		color: @gray-dark;
+		}
+	.time-circle {
+		width:44px;
+		height:44px;
+		margin-left:-38px;
+		margin-top:32px;
+		float:left;
+		background:url(../img/time-circle.png) no-repeat 0 0 #f8f7f8;
+	}
+	.eduEntity {
+		width:auto;
+		padding:0 47px 6px 70px;
+		margin-left:15px;
+		text-align:left;
+		p {
+		color: @gray-dark;
+		line-height:27px;
+		}
+		h3 {
+		color:@gray-dark;
+		padding-bottom:1px;
+		margin-top:-8px;
+		}
+		h4 {
+		color:@gray-dark;
+		padding-bottom:11px;
+		}
+	}
+	@media (max-width: @screen-xs-max), (max-width: @screen-sm-max) {
+			.educationYear span {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        .center-block();
+			}
+  		.eduEntity  {
+				width: auto;  				
+        .center-block();
+        margin: 0 auto;
+        padding: 0;
+  		}
+  		.time-circle {
+		    display: none;
+  		}
+  		.education-detail .detailArea {
+				border-left:none;
+        .center-block();
+			}
+  }
+}
+// ------------------------------------------------------------------
+// 7. Contact Section
+// ------------------------------------------------------------------
+#contact {
+	padding-bottom: 0;
+	margin-bottom: -10px;
+
+	placeholder  {
+	    color: #fff;
+	}
+
+	input#name, input#email {
+		background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%); /* firefox */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#546A7F), color-stop(20%,#5E768D)); /* webkit */
+		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+		padding:15px 30px;
+		margin-bottom:12px;
+		outline:none;
+		border:#cdc9ce 1px solid;
+		font-size:15px;
+		letter-spacing: 1px;
+	}
+	
+	textarea {
+		background: #5E768D;
+		background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%); /* firefox */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#546A7F), color-stop(20%,#5E768D)); /* webkit */
+		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+		-moz-box-shadow: 0px 1px 0px #f2f2f2;-webkit-box-shadow: 0px 1px 0px #f2f2f2;
+		font-size: 1em; 
+  	color: #fff; 
+		text-shadow: 0px -1px 0px #334f71; 
+		letter-spacing: 1px;
+		padding-left: 30px;
+
+	}
+	textarea::-webkit-input-placeholder,
+	input::-webkit-input-placeholder {
+  	color: #fff; 
+  	text-shadow: 0px -1px 0px #38506b;  
+	}
+	textarea::-moz-placeholder,
+		 input::-moz-input-placeholder {
+  	color: #fff; 
+    text-shadow: 0px -1px 0px #38506b; 
+	}
+
+	input#name:focus, input#email:focus, textarea:focus {
+		background: #728eaa;
+		background: -moz-linear-gradient(top, #668099 0%, #728eaa 20%); /* firefox */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#668099), color-stop(20%,#728eaa)); /* webkit */
+		color: #fff;
+	}
+	.btnsend {
+    width: 140px;
+    height: 44px;
+    border: #009900 3px solid;
+    line-height: 34px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    float: right;
+    letter-spacing: 2px;
+    font-weight: 500;
+	}
+	.success {
+	  padding: 1em;
+	  margin-bottom: 0.75rem;
+	  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	  color: #468847;
+	  background-color: #dff0d8;
+	  border: 1px solid #d6e9c6;
+	  -webkit-border-radius: 4px;
+	     -moz-border-radius: 4px;
+	          border-radius: 4px;
+    display: none;
+	}
+	.errors {
+	  padding: 1em;
+	  margin-bottom: 0.75rem;
+	  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	  color: #b94a48;
+	  border: 1px solid rgba(185, 74, 72, 0.3);
+	  -webkit-border-radius: 4px;
+	     -moz-border-radius: 4px;
+	          border-radius: 4px;
+    display: none;
+	}
+	.error.visible, .success.visible {
+    display:block;    
+	}
+	@media (max-width: @screen-xs-max) {
+      .reviews {
+          max-width: 400px;
+          .center-block();
+    }
+  }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)  {
+	}
+}
+// ------------------------------------------------------------------
+// 8. Map Section
+// ------------------------------------------------------------------
+	.map-contact	 {
+		margin-bottom: 0;
+		iframe {
+			padding: 0;
+			margin: 0 auto;	        
+    }		
+}
+// ------------------------------------------------------------------
+// 9. Blog Section
+// ------------------------------------------------------------------
+
+.tweets {
+	webkit-box-shadow: 0 0 3px 0 rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:   0 0 3px 0 rgba(50, 50, 50, 0.75);
+	box-shadow:        0 0 3px 0 rgba(50, 50, 50, 0.75);
+	padding: 16px;
+}

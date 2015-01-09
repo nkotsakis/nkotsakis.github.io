@@ -1,0 +1,71 @@
+/* ---------------------------------------------------------------
+	Template Name: Plegma
+	Template URI: http://www.ergastiri.eu
+	Description: ERgastiri - One Page CV template
+	Author: Nicolas
+	Author URI: http://www.ergastiri.eu
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+	
+	1.	Footer Section 
+
+
+// ------------------------------------------------------------------
+// 1. Footer Contents
+// ------------------------------------------------------------------*/
+
+footer {
+  background-color: @gray;
+	ul.social {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+		> li {
+			display: inline-block;
+			// margin-bottom: 20px;
+			> a {
+				display: inline-block;
+				font-size: 18px;
+				line-height: 30px;
+				.square(30px); 	// see bootstrap/mixins.less
+				border-radius: 36px; // large enough to make the icons and their backgrounds appear circular
+				background-color: @gray-light;
+				color: #fff;
+				margin: 0 3px 3px 0;
+				&:hover {
+				text-decoration: none;  // underline is removed from hover
+				background-color: @link-hover-color;
+				}
+			}
+		}
+	}
+	.topscreen {
+    width: 44px;
+    font-size: 38px;
+    line-height: 44px;
+    border: solid 2px @gray-dark; 
+    color: @gray-dark;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-top: 0;
+    webkit-transition: all .2s ease-in, 1s;
+    -moz-transition: all .2s ease-in, 1s;
+    -o-transition: all .2s ease-in, 1s;
+    -ms-transition: all .2s ease-in, 1s;
+    transition: all .2s ease-in, 1s;
+		
+		&:hover {
+			color: #ddd;
+			border: solid 2px #eee;
+    }
+
+	}
+}
+
+footer[role="contentinfo"] {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	text-align: center;
+}
